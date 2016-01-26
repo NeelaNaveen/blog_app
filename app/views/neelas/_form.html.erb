@@ -1,0 +1,37 @@
+<%= form_for(@neela) do |f| %>
+  <% if @neela.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@neela.errors.count, "error") %> prohibited this neela from being saved:</h2>
+
+      <ul>
+      <% @neela.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.number_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.number_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :blood %><br>
+    <%= f.text_field :blood %>
+  </div>
+  <div class="field">
+    <%= f.label :group %><br>
+    <%= f.text_field :group %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

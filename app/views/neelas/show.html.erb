@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @neela.username %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @neela.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @neela.weight %>
+</p>
+
+<p>
+  <strong>Blood:</strong>
+  <%= @neela.blood %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @neela.group %>
+</p>
+
+<%= link_to 'Edit', edit_neela_path(@neela) %> |
+<%= link_to 'Back', neelas_path %>

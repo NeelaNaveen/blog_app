@@ -1,0 +1,33 @@
+<h1>Listing neelas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Blood</th>
+      <th>Group</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @neelas.each do |neela| %>
+      <tr>
+        <td><%= neela.username %></td>
+        <td><%= neela.height %></td>
+        <td><%= neela.weight %></td>
+        <td><%= neela.blood %></td>
+        <td><%= neela.group %></td>
+        <td><%= link_to 'Show', neela %></td>
+        <td><%= link_to 'Edit', edit_neela_path(neela) %></td>
+        <td><%= link_to 'Destroy', neela, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Neela', new_neela_path %>

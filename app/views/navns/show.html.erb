@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @navn.username %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @navn.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @navn.weight %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @navn.location %>
+</p>
+
+<%= link_to 'Edit', edit_navn_path(@navn) %> |
+<%= link_to 'Back', navns_path %>

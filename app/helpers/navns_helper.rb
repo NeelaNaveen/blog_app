@@ -1,0 +1,2 @@
+module NavnsHelper
+end

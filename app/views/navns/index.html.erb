@@ -1,0 +1,31 @@
+<h1>Listing navns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @navns.each do |navn| %>
+      <tr>
+        <td><%= navn.username %></td>
+        <td><%= navn.height %></td>
+        <td><%= navn.weight %></td>
+        <td><%= navn.location %></td>
+        <td><%= link_to 'Show', navn %></td>
+        <td><%= link_to 'Edit', edit_navn_path(navn) %></td>
+        <td><%= link_to 'Destroy', navn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Navn', new_navn_path %>
